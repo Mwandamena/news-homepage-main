@@ -1,0 +1,105 @@
+
+.navbar {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    img {
+        width: 50px;
+    }
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    color: var(--dark-grayish-blue);
+
+    .nav-item {
+        a {
+            &:hover {
+                color: var(--soft-red);
+            }
+        }
+    }
+}
+
+.navbar-toggler {
+    position: absolute;
+    z-index: 9999;
+    display: none;
+    right: 0;
+    top: .7rem;
+    background-image: url(../assets/images/icon-menu.svg);
+    background-repeat: no-repeat;
+    width: 2rem;
+    aspect-ratio: 4 / 4;
+    @include transition;
+    
+
+    @include phone{
+        display: block;
+    }
+}
+
+.navbar-toggler[aria-expanded="true"]{
+    background-image: url(../assets/images/icon-menu-close.svg);
+    aspect-ratio: 3 / 3;
+    right: 0;
+    top: .2rem;
+}
+
+.nav {
+    @include phone {
+        position: fixed;
+        inset: 0 0 0 35%;
+        z-index: 1000;
+        background-color: white;
+        transform: translateX(100%);
+
+        .nav-links {
+            flex-direction: column;
+            padding: 8rem 2rem;
+            .nav-item {
+                color: #000;
+            }
+        }
+    }
+
+    @include smallphone {
+        inset: 0 0 0 30%;
+    }
+}
+
+.nav[data-visible="true"]{
+    display: block;
+    transform: translateX(0%); 
+}
+
+.trans{
+    @include transition;
+}
+
+
+/* overlay */
+@include phone {
+    div[aria-expanded="true"]{
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .6);
+        width: 100%;
+        height: 100%;
+        z-index: 13;
+        @include transition;
+    }
+}
+
+
+

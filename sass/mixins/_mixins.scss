@@ -1,0 +1,29 @@
+// breakpoints
+$smallphone: 23.4375em;
+$phone: 38.5em;
+$tablet: 56.25em;
+$desktop: 90em;
+
+@mixin smallphone{
+    @media only screen and (max-width: $smallphone) {
+        @content;
+    }
+}
+
+@mixin phone{
+    @media only screen and (max-width: $phone) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (max-width: $desktop) {
+        @content;
+    }
+}

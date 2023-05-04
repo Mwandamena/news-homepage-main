@@ -1,0 +1,23 @@
+// flexbox
+@mixin flex($flex-direction: row){
+    display: flex;
+    flex-direction: $flex-direction;
+}
+
+// container
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+
+    @include phone {
+        padding: 2rem 1rem;
+    }
+}
+
+// transition
+@mixin transition {
+    transition:all cubic-bezier(0.42, 0, 0.38, 0.86) .3s;
+}
+

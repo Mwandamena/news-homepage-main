@@ -1,0 +1,64 @@
+@font-face {
+    font-family: Inter;
+    src: url(../font/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+
+
+:root {
+    // colors
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+
+    // typography
+    --fs: 15px;
+
+    --fw-400: 400;
+    --fw-700: 700;
+    --fw-800: 800;
+}
+
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+
+li, a {
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+button {
+    outline: none;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+img, 
+svg, 
+video {
+    max-width: 100%;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--dark-grayish-blue);
+}
+
